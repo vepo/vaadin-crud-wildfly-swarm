@@ -1,41 +1,38 @@
 package org.vepo.vcws.model;
 
-import org.bson.types.ObjectId;
-import org.jnosql.artemis.Column;
-import org.jnosql.artemis.Entity;
-import org.jnosql.artemis.Id;
-
 /**
  * Customer
  * 
  * @author Victor Osório
  */
-@Entity
 public class Customer {
 
-    @Id
-    private ObjectId id;
+    private Long id;
 
-    @Column
     private String firstName;
 
-    @Column
     private String lastName;
 
     public Customer() {
     }
 
+    public Customer(Long id, String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
     /**
      * @return the id
      */
-    public ObjectId getId() {
+    public Long getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(ObjectId id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

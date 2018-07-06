@@ -13,17 +13,8 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <version.wildfly.swarm>2018.5.0</version.wildfly.swarm>
-        <vaadin.version>8.3.2</vaadin.version>
         <failOnMissingWebXml>false</failOnMissingWebXml>
     </properties>
-
-    <repositories>
-        <repository>
-            <id>vaadin-addons</id>
-            <url>http://maven.vaadin.com/vaadin-addons</url>
-        </repository>
-    </repositories>
-
 
     <dependencyManagement>
         <dependencies>
@@ -34,14 +25,6 @@
                 <version>${version.wildfly.swarm}</version>
                 <scope>import</scope>
                 <type>pom</type>
-            </dependency>
-            <!-- Vaadin Dependecies -->
-            <dependency>
-                <groupId>com.vaadin</groupId>
-                <artifactId>vaadin-bom</artifactId>
-                <version>${vaadin.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -62,22 +45,6 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>com.vaadin</groupId>
-                <artifactId>vaadin-maven-plugin</artifactId>
-                <version>${vaadin.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>update-theme</goal>
-                            <goal>update-widgetset</goal>
-                            <goal>compile</goal>
-                            <!-- Comment out compile-theme goal to use on-the-fly theme compilation -->
-                            <goal>compile-theme</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
@@ -93,40 +60,6 @@
         <dependency>
             <groupId>org.wildfly.swarm</groupId>
             <artifactId>microprofile</artifactId>
-        </dependency>
-
-        <!-- Database - JNoSQL -->
-        <dependency>
-            <groupId>org.jnosql.artemis</groupId>
-            <artifactId>artemis-document</artifactId>
-            <version>0.0.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jnosql.artemis</groupId>
-            <artifactId>artemis-configuration</artifactId>
-            <version>0.0.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jnosql.diana</groupId>
-            <artifactId>mongodb-driver</artifactId>
-            <version>0.0.5</version>
-        </dependency>
-        <!-- Minimal Vaadin dependencies -->
-        <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-server</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-client-compiled</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-themes</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.vaadin</groupId>
-            <artifactId>vaadin-cdi</artifactId>
         </dependency>
     </dependencies>
 </project>
