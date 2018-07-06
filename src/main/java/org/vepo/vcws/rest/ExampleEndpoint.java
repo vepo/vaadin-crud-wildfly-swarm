@@ -9,7 +9,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.vepo.vcws.model.Customer;
-
+/**
+ * @author Victor Osório
+ */
 @Path("")
 public class ExampleEndpoint {
     @GET
