@@ -30,8 +30,7 @@ public class ListCustomerView extends VerticalLayout implements View {
 	public static final String LIST_CUSTOMER_VIEW = "";
 
 	@Inject
-	@Database(DatabaseType.DOCUMENT)
-	private CustomerRepository repo;
+	private CustomerRepository customerRepository;
 
 	private Grid<Customer> grid;
 
@@ -85,6 +84,6 @@ public class ListCustomerView extends VerticalLayout implements View {
 	}
 
 	private void listCustomers() {
-		grid.setItems(repo.findAll());
+		grid.setItems(customerRepository.findAll());
 	}
 }

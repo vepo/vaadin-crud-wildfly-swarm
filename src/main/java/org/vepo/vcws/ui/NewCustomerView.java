@@ -33,7 +33,6 @@ public class NewCustomerView extends GridLayout implements View {
     public static final String NEW_CUSTOMER_VIEW = "new";
 
     @Inject
-    @Database(DatabaseType.DOCUMENT)
     private CustomerRepository customerRepository;
 
     @Inject

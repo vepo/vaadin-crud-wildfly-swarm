@@ -21,9 +21,6 @@ import com.vaadin.ui.Notification.Type;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 
-import org.bson.types.ObjectId;
-import org.jnosql.artemis.Database;
-import org.jnosql.artemis.DatabaseType;
 import org.vepo.vcws.model.Customer;
 import org.vepo.vcws.model.CustomerRepository;
 
@@ -40,7 +37,6 @@ public class EditCustomerView extends GridLayout implements View {
     public static final String EDIT_CUSTOMER_VIEW = "edit";
 
     @Inject
-    @Database(DatabaseType.DOCUMENT)
     private CustomerRepository customerRepository;
 
     @Inject
@@ -55,7 +51,7 @@ public class EditCustomerView extends GridLayout implements View {
 
     @Override
     public void enter(ViewChangeEvent event) {
-        Optional<Customer> customer = customerRepository.findById(new ObjectId(event.getParameters()));
+        Optional<Customer> customer = customerRepository.findById(Long.valueOf(event.getParameters()));
         if (customer.isPresent()) {
             this.customer = customer.get();
             binder.setBean(this.customer);
