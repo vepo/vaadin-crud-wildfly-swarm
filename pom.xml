@@ -95,22 +95,6 @@
             <artifactId>microprofile</artifactId>
         </dependency>
 
-        <!-- Database - JNoSQL -->
-        <dependency>
-            <groupId>org.jnosql.artemis</groupId>
-            <artifactId>artemis-document</artifactId>
-            <version>0.0.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jnosql.artemis</groupId>
-            <artifactId>artemis-configuration</artifactId>
-            <version>0.0.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jnosql.diana</groupId>
-            <artifactId>mongodb-driver</artifactId>
-            <version>0.0.5</version>
-        </dependency>
         <!-- Minimal Vaadin dependencies -->
         <dependency>
             <groupId>com.vaadin</groupId>

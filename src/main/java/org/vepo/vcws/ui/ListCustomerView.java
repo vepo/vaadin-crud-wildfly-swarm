@@ -17,8 +17,6 @@ import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.themes.ValoTheme;
 
-import org.jnosql.artemis.Database;
-import org.jnosql.artemis.DatabaseType;
 import org.vepo.vcws.model.Customer;
 import org.vepo.vcws.model.CustomerRepository;
 

@@ -21,8 +21,6 @@ import com.vaadin.ui.Notification.Type;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 
-import org.jnosql.artemis.Database;
-import org.jnosql.artemis.DatabaseType;
 import org.vepo.vcws.model.Customer;
 import org.vepo.vcws.model.CustomerRepository;
 
